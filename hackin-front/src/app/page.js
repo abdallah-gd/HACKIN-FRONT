@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import HomePage from "@/app/Home/home.jsx"
+import HomePage from "@/app/Home/page.jsx"
 
 export default function Home() {
   return (
