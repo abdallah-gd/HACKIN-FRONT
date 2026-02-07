@@ -172,10 +172,11 @@ const GazaReconstructionPlatform = () => {
               </p>
               
               
-              
+              <a href="/TrainerApplication">
               <button className="w-full bg-[#00695C] text-white py-3 rounded-xl font-bold border-2 border-[#00695C] hover:bg-white hover:text-[#00695C] transition-all">
                 Become a Trainer
               </button>
+              </a>
             </div>
             
             <div className="relative">
@@ -202,7 +203,7 @@ const GazaReconstructionPlatform = () => {
           
           <div className="flex gap-8 text-sm font-semibold">
 
-            <a className="hover:text-primary text-green-700 transition-colors" id='contact' href="#">
+            <a className="hover:text-primary text-green-700 transition-colors" id='contact' href="">
               Contact Us
             </a>
             
