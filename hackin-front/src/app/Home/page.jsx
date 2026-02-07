@@ -3,54 +3,20 @@
 
 import React, { useState , useEffect} from 'react';
 import Image from 'next/image';
+import axios from 'axios'
 
-/**
- * Gaza Reconstruction Platform
- * 
- * A complete React component for the Rebuild & Learn platform.
- * Includes header, hero, stats, projects grid, training section, and footer.
- * 
- * Features:
- * - Dark mode toggle
- * - Responsive design
- * - Material Symbols icons
- * - Tailwind CSS styling
- */
 const GazaReconstructionPlatform = () => {
+  const [projects, setProjects] = useState([]);
 
-    const projects = [ { id: 1, name: "Al-Rimal Clinic", location: "Gaza City", imageUrl: "/img1.png" },
-    { id: 2, name: "Water Station", location: "North Gaza", imageUrl: "/img2.png" },
-    { id: 3, name: "School Renovation", location: "Rafah", imageUrl: "/img3.png" },
-    { id: 4, name: "Hospital Wing", location: "Khan Younis", imageUrl: "/img4.png" }];
+  useEffect(() => {
+    const fetchProjects = async () => {
+        const response = await axios.get('http://127.0.0.1:8000');
+        setProjects(response.data.projects); 
+    };
 
-//     const [projects, setProjects ] = useState(null);
-  
-//     useEffect(() => {
-//     const fetchProjects = async () => {
-//       try {
-//         setLoading(true);
-//         setError(null);
+    fetchProjects();
+  }, []);
 
-//         const response = await axiosInstance.get('');
-//         console.log("projects response:", response.data);
-        
-//         setProjects(response.data);
-//       } catch (err) {
-//         console.error("Failed to fetch Projects data:", err);
-//         setError("Failed to load Projects. Please try again.");
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchProjects();
-//   }, []);
-
-  
-
-
-    
-  
 
   return (
     <div className="relative flex min-h-screen flex-col overflow-x-hidden ">
@@ -159,7 +125,7 @@ const GazaReconstructionPlatform = () => {
           >
             <div className="relative h-56">
               <img
-                src={project.imageUrl}
+                src={project.img}
                 alt={project.name}
                 className="w-full h-full object-cover"
               />

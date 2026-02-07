@@ -26,7 +26,7 @@ export default function VolunteerPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
         <div className="relative rounded-2xl overflow-hidden mb-12">
-          <div className="relative h-64 w-full " style={{backgroundImage: 'url(../../../public/elect.png)', backgroundSize: 'cover', backgroundPosition: 'center' , zIndex: 2}}>
+          <div className="relative h-64 w-full " style={{backgroundImage: 'url(/elect.png)', backgroundSize: 'cover', backgroundPosition: 'center' , zIndex: 2}}>
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white px-4">
                 <h1 className="text-4xl font-bold mb-2">
