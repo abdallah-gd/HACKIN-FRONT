@@ -18,28 +18,33 @@ import Image from 'next/image';
  */
 const GazaReconstructionPlatform = () => {
 
-    const [projects, setProjects ] = useState(null);
+    const projects = [ { id: 1, name: "Al-Rimal Clinic", location: "Gaza City", imageUrl: "/img1.png" },
+    { id: 2, name: "Water Station", location: "North Gaza", imageUrl: "/img2.png" },
+    { id: 3, name: "School Renovation", location: "Rafah", imageUrl: "/img3.png" },
+    { id: 4, name: "Hospital Wing", location: "Khan Younis", imageUrl: "/img4.png" }];
+
+//     const [projects, setProjects ] = useState(null);
   
-    useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        setLoading(true);
-        setError(null);
+//     useEffect(() => {
+//     const fetchProjects = async () => {
+//       try {
+//         setLoading(true);
+//         setError(null);
 
-        const response = await axiosInstance.get('');
-        console.log("projects response:", response.data);
+//         const response = await axiosInstance.get('');
+//         console.log("projects response:", response.data);
         
-        setProjects(response.data);
-      } catch (err) {
-        console.error("Failed to fetch Projects data:", err);
-        setError("Failed to load Projects. Please try again.");
-      } finally {
-        setLoading(false);
-      }
-    };
+//         setProjects(response.data);
+//       } catch (err) {
+//         console.error("Failed to fetch Projects data:", err);
+//         setError("Failed to load Projects. Please try again.");
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
 
-    fetchProjects();
-  }, []);
+//     fetchProjects();
+//   }, []);
 
   
 
@@ -132,10 +137,10 @@ const GazaReconstructionPlatform = () => {
         </section>
         
         {/* Projects Grid */}
-        <section className="max-w-[1280px] mx-auto px-6 py-20">
+        <section className="w-full mx-auto px-6 py-20 px-42 bg-gradient-to-b from-[#F9FAFB] to-green-100">
           <div className="flex justify-between items-end mb-10">
             
-              <h2 className="text-black text-3xl md:text-5xl font-black leading-tight tracking-tight  tracking-tight">
+              <h2 className="text-black text-3xl md:text-5xl font-black leading-tight tracking-tight  ">
                 Active Reconstruction Projects
               </h2>
               
@@ -144,7 +149,7 @@ const GazaReconstructionPlatform = () => {
             
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-300">
         {projects.map(project => (
           <div
             key={project.id}
@@ -184,46 +189,22 @@ const GazaReconstructionPlatform = () => {
         </section>
 
         {/* Skill Training Section */}
-        <section className="bg-[#ee6c2b]/10 dark:bg-primary/5 py-20 px-6">
-          <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-black mb-6 leading-tight">
+        <section className="bg-gradient-to-b from-green-100 to-[#F9FAFB] py-20 px-6">
+          <div className="w-full px-46 grid  grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className='flex flex-col gap-12'>
+              <h2 className="text-black text-2xl md:text-4xl font-black leading-tight   tracking-tight">
                 Empowering Professionals,<br/>Building Futures.
               </h2>
               
-              <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
+              <p className="md:text-lg text-[12px] mb-8 text-black ">
                 Our platform doesn't just fund buildings; we train the hands that build them. 
                 By joining our vocational programs, local residents gain certifications in 
                 sustainable engineering, masonry, and modern construction management.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-primary bg-white dark:bg-[#3d2b21] p-2 rounded-lg">
-                    school
-                  </span>
-                  <div>
-                    <h4 className="font-bold">Certified Training</h4>
-                    <p className="text-sm text-gray-500">
-                      Industry-standard certifications for all graduates.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-primary bg-white dark:bg-[#3d2b21] p-2 rounded-lg">
-                    payments
-                  </span>
-                  <div>
-                    <h4 className="font-bold">Paid Apprenticeships</h4>
-                    <p className="text-sm text-gray-500">
-                      Earn while you learn on real reconstruction sites.
-                    </p>
-                  </div>
-                </div>
-              </div>
               
-              <button className="mt-10 bg-[#1b120d] text-white px-8 py-3 rounded-xl font-bold hover:bg-black transition-all">
+              
+              <button className="w-full bg-[#00695C] text-white py-3 rounded-xl font-bold border-2 border-[#00695C] hover:bg-white hover:text-[#00695C] transition-all">
                 Become a Trainer
               </button>
             </div>
@@ -233,7 +214,7 @@ const GazaReconstructionPlatform = () => {
               <img 
                 className="rounded-3xl shadow-2xl relative z-10 w-full h-auto" 
                 alt="A teacher showing a student how to use engineering tools on a blueprint" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2pWDVpDIOYIWplVCmYyDYm19hYtXCznu1UHI3s3V9AkQlsLHk4YthJxLccO0guH71rE05R-WsmAucQ7b1ma0AuSq5X_LRrBSJO0rWgAcDFhnVA3dtmD9hOCha69HnndraG-PBDrVZ7CfeOciYokSWwAbB98s0G7RCkeww2vkfvffbdIHhrLcMYGxnJVx5ytkiv1z7-oCNJl8aJWKT10VwR4nJ3bnqap5mdopEAgxx8wTIviTDvDbJSTaaMt1uT_2X3LpTykmsVA"
+                src="/image9.Png"
               />
             </div>
           </div>
@@ -241,49 +222,27 @@ const GazaReconstructionPlatform = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-background-dark border-t border-[#f3ebe7] dark:border-[#3d2b21] py-12 px-6">
-        <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <footer className="bg-white  border-t border-[#f3ebe7]  py-12 px-6">
+        <div className="w-full px-26 mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary">architecture</span>
-              <span className="text-xl font-black">Rebuild &amp; Learn</span>
-            </div>
+            
             <p className="text-sm text-gray-500 text-center md:text-left">
               Humanitarian infrastructure and skill-sharing for Gaza.
             </p>
           </div>
           
           <div className="flex gap-8 text-sm font-semibold">
-            <a className="hover:text-primary transition-colors" href="#">
-              Privacy Policy
-            </a>
-            <a className="hover:text-primary transition-colors" href="#">
+
+            <a className="hover:text-primary text-green-700 transition-colors" href="#">
               Contact Us
             </a>
-            <a className="hover:text-primary transition-colors" href="#">
-              Newsletter
-            </a>
+            
           </div>
           
-          <div className="flex gap-4">
-            <a 
-              className="size-10 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" 
-              href="#"
-            >
-              <span className="material-symbols-outlined text-xl">share</span>
-            </a>
-            <a 
-              className="size-10 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all" 
-              href="#"
-            >
-              <span className="material-symbols-outlined text-xl">volunteer_activism</span>
-            </a>
-          </div>
+          
         </div>
         
-        <div className="mt-8 pt-8 border-t border-[#f3ebe7] dark:border-[#3d2b21] text-center text-xs text-gray-400">
-          © 2024 Rebuild &amp; Learn. A community-led humanitarian initiative.
-        </div>
+        
       </footer>
     </div>
   );
