@@ -66,10 +66,10 @@ const GazaReconstructionPlatform = () => {
             <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">
               Home
             </a>
-            <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">
+            <a   className="text-sm font-semibold hover:text-primary transition-colors" href="#mission">
               Our Mission
             </a>
-            <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">
+            <a className="text-sm font-semibold hover:text-primary transition-colors" href="#trainer">
               Become a Trainer
             </a>
           </nav>
@@ -105,21 +105,23 @@ const GazaReconstructionPlatform = () => {
             
             
             <div className="flex flex-wrap justify-center gap-4 mt-4">
-              <button className="bg-[#00695C] text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:scale-105 transition-all flex items-center ">
+              <a href="#projects"><button className="bg-[#00695C] text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:scale-105 transition-all flex items-center ">
                 View Active Projects 
                 
               </button>
-              
+              </a>
+              <a href="#contact">
               <button className="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">
                 contact us
               </button>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Our mission */}
 
-        <section className='flex flex-col mx-35 my-12 gap-12  justify-center '>
+        <section id='mission' className='flex flex-col mx-35 my-12 gap-12  justify-center '>
             <div>
                 <h1 className='text-black text-3xl md:text-5xl font-black leading-tight tracking-tight' > Our Mission </h1>
             </div>
@@ -137,7 +139,7 @@ const GazaReconstructionPlatform = () => {
         </section>
         
         {/* Projects Grid */}
-        <section className="w-full mx-auto px-6 py-20 px-42 bg-gradient-to-b from-[#F9FAFB] to-green-100">
+        <section id='projects' className="w-full mx-auto px-6 py-20 px-42 bg-gradient-to-b from-[#F9FAFB] to-green-100">
           <div className="flex justify-between items-end mb-10">
             
               <h2 className="text-black text-3xl md:text-5xl font-black leading-tight tracking-tight  ">
@@ -189,7 +191,7 @@ const GazaReconstructionPlatform = () => {
         </section>
 
         {/* Skill Training Section */}
-        <section className="bg-gradient-to-b from-green-100 to-[#F9FAFB] py-20 px-6">
+        <section id='trainer' className="bg-gradient-to-b from-green-100 to-[#F9FAFB] py-20 px-6">
           <div className="w-full px-46 grid  grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className='flex flex-col gap-12'>
               <h2 className="text-black text-2xl md:text-4xl font-black leading-tight   tracking-tight">
@@ -233,7 +235,7 @@ const GazaReconstructionPlatform = () => {
           
           <div className="flex gap-8 text-sm font-semibold">
 
-            <a className="hover:text-primary text-green-700 transition-colors" href="#">
+            <a className="hover:text-primary text-green-700 transition-colors" id='contact' href="#">
               Contact Us
             </a>
             
