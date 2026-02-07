@@ -78,11 +78,11 @@ const StudentProgress = () => {
           {/* Navigation */}
           <nav className="flex flex-col gap-1">
 
-            <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors" href="#">
+            <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors" href="/TrainerCourses">
               
               <p className="text-sm font-medium">My Courses</p>
             </a>
-            <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors" href="/StudentProgress">
+            <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors" href="/StudentsProgress">
               
               <p className="text-sm font-medium">Student Progress</p>
             </a>

@@ -26,7 +26,7 @@ export default function VolunteerPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
         <div className="relative rounded-2xl overflow-hidden mb-12">
-          <div className="relative h-64 w-full " style={{backgroundImage: 'url(../../../public/elect.png)', backgroundSize: 'cover', backgroundPosition: 'center' , zIndex: 2}}>
+          <div className="relative h-64 w-full " style={{backgroundImage: 'url(/elect.png)', backgroundSize: 'cover', backgroundPosition: 'center' , zIndex: 2}}>
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white px-4">
                 <h1 className="text-4xl font-bold mb-2">
@@ -75,7 +75,7 @@ export default function VolunteerPage() {
                 <input
                   type="text"
                   placeholder="Ahmad Tariq Stockdale"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-black"
                 />
               </div>
 
@@ -86,7 +86,7 @@ export default function VolunteerPage() {
                 <input
                   type="email"
                   placeholder="example@gmail.com"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-black"
                 />
               </div>
 
@@ -108,7 +108,7 @@ export default function VolunteerPage() {
                 <input
                   type="url"
                   placeholder="eg. linkedin"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-black"
                 />
               </div>
 
@@ -118,7 +118,7 @@ export default function VolunteerPage() {
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none bg-white text-gray-400 "
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none bg-white text-black "
                 />
               </div>
 
@@ -137,24 +137,24 @@ export default function VolunteerPage() {
             
             <form className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Full Name
                 </label>
                 <input
                   type="text"
                   placeholder="Ahmad Tariq Stockdale"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-black"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 ">
+                <label className="block text-sm font-medium text-black mb-2 ">
                   Email
                 </label>
                 <input
                   type="email"
                   placeholder="example@gmail.com"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white text-black"
                 />
               </div>
 
@@ -181,12 +181,12 @@ export default function VolunteerPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Motivation
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none bg-white"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none bg-white text-black"
                 />
               </div>
 
